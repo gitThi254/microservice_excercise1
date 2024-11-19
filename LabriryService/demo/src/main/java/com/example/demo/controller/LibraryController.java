@@ -22,9 +22,6 @@ public class LibraryController {
     }
     @GetMapping("/{id}")
     public Library get(@PathVariable int id) {
-        Book book  = restTemplate.getForObject("http://localhost:9093/book/"+id , Book.class);
-        Library library = libraryService.getLibrary(id);
-        library.setBook(book);
-        return library;
+        return null;
     }
 }

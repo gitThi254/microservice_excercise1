@@ -19,10 +19,7 @@ public class StudentController {
 
     @GetMapping("/{id}")
     public Student getStudent(@PathVariable int id) {
-        Library library = restTemplate.getForObject("http://localhost:9092/library/" + id, Library.class);
-        Student student = studentService.getStudentById(id);
-        student.setLibrary(library);
-      return  student;
+      return  null;
   }
     @PostMapping
     public Student addStudent(@RequestBody Student student) {
