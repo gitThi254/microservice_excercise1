@@ -1,0 +1,23 @@
+spring:
+
+  main:
+    allow-circular-references: true
+  datasource:
+    hikari:
+      auto-commit: false
+    url: jdbc:postgresql://localhost:5432/jwt3
+    username: postgres
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    database: postgresql
+  application:
+    name: BookService
+server:
+  port: 9093
+eureka:
+  instance:
+    hostname: localhost

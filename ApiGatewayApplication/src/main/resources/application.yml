@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: API-Gateway
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: StudentService
+            uri: lb://StudentService
+            predicates:
+              - Path=/student/**
+
+
+server:
+  port: 9094
+eureka:
+  instance:
+    hostname: localhost
